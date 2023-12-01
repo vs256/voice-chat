@@ -6,7 +6,7 @@ class Server:
         self.ip = socket.gethostbyname(socket.gethostname())
         while 1:
             try:
-                self.port = 5000
+                self.port = int(input("Enter server port: ")) #5000
 
                 self.s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
                 self.s.bind((self.ip, self.port))
